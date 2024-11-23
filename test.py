@@ -1,6 +1,12 @@
 import requests
 
-url = "http://0.0.0.0:9696/predict"
+"""
+Set the host to
+    1. 'localhost' if you want to run the server locally.
+    2. the URL of the deployed environment if you want to send a request to the cloud server.
+"""
+host = "localhost"
+url = f"http://{host}/predict"
 client = {
     "person_age": 28,
     "person_gender": "male",
