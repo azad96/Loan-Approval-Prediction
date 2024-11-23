@@ -7,6 +7,7 @@ Set the host to
 """
 host = "localhost"
 url = f"http://{host}/predict"
+
 client = {
     "person_age": 28,
     "person_gender": "male",
@@ -20,5 +21,6 @@ client = {
     "credit_score": 600,
     "previous_loan_defaults_on_file": "yes"
 }
+
 result = requests.post(url, json=client).json()
 print(result)
