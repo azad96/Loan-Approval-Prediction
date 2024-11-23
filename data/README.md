@@ -1,10 +1,18 @@
 # Loan Approval Classification Dataset
 Link: https://www.kaggle.com/datasets/taweilo/loan-approval-classification-data
-## 1. Data Source
+
+## 1. How to download the data
+
+```
+cd data
+bash download_data.sh
+```
+
+## 2. Data Source
 
 This dataset is a synthetic version inspired by the original Credit Risk dataset on Kaggle and enriched with additional variables based on Financial Risk for Loan Approval data. SMOTENC was used to simulate new data points to enlarge the instances. The dataset is structured for both categorical and continuous features.
 
-## 2. Metadata
+## 3. Metadata
 
 The dataset contains 45,000 records and 14 variables, each described below:
 
