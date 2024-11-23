@@ -10,34 +10,34 @@ This project uses a dataset containing loan application information to predict w
 - Financial details (income, loan amount, loan intent)
 - Credit history (credit score, previous defaults)
 
-## Technical Stack
-
-- Python 3.11
-- Flask for API service
-- scikit-learn 1.5.2 for machine learning
-- Docker for containerization
-- AWS Elastic Beanstalk for cloud deployment
-
-## Model Performance
-
 The final model achieves:
 - ROC AUC Score: ~0.897 (mean across 5-fold cross-validation)
 - Standard Deviation: ~0.102
 
+## Technical Stack
+
+- Python 3.11
+- Flask for API service
+- Docker for containerization
+- AWS Elastic Beanstalk for cloud deployment
+
 ## Project Structure
+
 ```
 .
 ├── data                   # Information on dataset
-├── notebook.ipynb          
-├── train.py          
+├── notebook.ipynb         # All the steps to train the model
+├── train.py               # notebook.ipynb is converted to python script
 ├── predict.py             # Flask application
-├── test.py                # Send requests
+├── test.py                # Send request to application
 ├── model.bin              # Pickled model and dict vectorizer
-├── Dockerfile            
-├── Pipfile               
-├── Pipfile.lock          
+├── Dockerfile             # Dockerfile for containerization
+├── Pipfile                # Pipfile for dependency management
+├── Pipfile.lock     
+├── aws-deployment-link.png
 └── README.md
 ```
+
 ## Installation
 
 1. Clone the repository:
@@ -57,18 +57,16 @@ pipenv install
 pipenv shell
 ~~~
 
-## Running Locally
+## Running the Project
 
-1. Start the Flask server:
+1. Start the Flask server locally:
 ~~~
 python predict.py
 ~~~
 
 2. The service will be available at `http://localhost:9696`
 
-## API Usage
-
-Make sure the host is set to `localhost` in test.py. Then, send POST requests to `/predict` endpoint with test.py:
+3. Make sure the host is set to `localhost` in test.py. Then, send POST requests to `/predict` endpoint with test.py:
 ~~~
 python test.py
 ~~~
@@ -90,7 +88,10 @@ docker build -t loan-approval-prediction .
 ~~~
 docker run -it --rm -p 9696:9696 loan-approval-prediction
 ~~~
-This will start the Flask server automatically, so you can send a request with test.py
+This will start the Flask server automatically, so you can send a request with test.py as before:
+~~~
+python test.py
+~~~
 
 ## Cloud Deployment
 
