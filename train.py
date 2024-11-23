@@ -10,7 +10,7 @@ from sklearn.metrics import mutual_info_score, roc_auc_score, roc_curve
 from sklearn.model_selection import train_test_split, KFold
 
 
-df = pd.read_csv('loan_data.csv')
+df = pd.read_csv('data/loan_data.csv')
 
 # Make all string columns lowercase and replace spaces with underscores
 for column in df.select_dtypes(include=['object']).columns:
