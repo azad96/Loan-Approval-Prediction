@@ -5,7 +5,7 @@ Set the host to
     1. 'localhost' if you want to run the server locally.
     2. the URL of the deployed environment if you want to send a request to the cloud server.
 """
-host = "localhost"
+host = "localhost:9696"
 url = f"http://{host}/predict"
 
 client = {
