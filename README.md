@@ -1,6 +1,6 @@
 # Loan Approval Prediction
 
-A machine learning service that predicts loan approval probability based on various applicant features. The model is trained using logistic regression and deployed as a Flask web service.
+A machine learning service that predicts loan approval probability based on various applicant features. The model is trained using logistic regression and deployed as a Flask web service. This repo is developed for the ML Zoomcamp Midterm Project.
 
 ## Project Overview
 
